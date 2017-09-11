@@ -1,0 +1,60 @@
+{% extends 'todolist/index.html' %}
+{% block title %}Details{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {% if feedback %}
+                        {% for all_feedback in feedback %}
+
+                            <li>{{ all_feedback.user.first_name }} <small>{{ all_feedback.mood }}</small> <textarea>{{ all_feedback.reasonMood }}</textarea></li>
+
+                            <p>&nbsp;</p>
+                        {% endfor %}
+                    {% else %}
+                        <h3>Er is nog geen feedback gegeven</h3>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% if error_message %}
+        {% endif %}
+        <form action="{% url 'todos:give_feedback' user.id %}" method="post">
+            <div class="col-md-4 ">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        {% csrf_token %}
+                        <label id="mood">Mood: </label><input type="text" id="mood" name="mood" value="Green" /><br />
+                        <input type="submit">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label id="reasonMood">Comments: </label><input type="text" id="reasonMood" name="reasonMood" value="All good" /><br />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label id="date">Date: </label><input type="text" id="date" name="date" value="01-01-1900" /><br />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

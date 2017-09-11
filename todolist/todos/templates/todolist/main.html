@@ -1,0 +1,11 @@
+{% extends 'todolist/index.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+{% if users %}
+    {% for user in users %}
+        <li><a href="{% url 'todos:details' user.id %}">{{ user.first_name }}</a></li>
+    {% endfor %}
+{% else %}
+    <h3>No users present</h3>
+{% endif %}
+{% endblock %}
