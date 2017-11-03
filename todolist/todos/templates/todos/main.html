@@ -1,0 +1,11 @@
+{% extends 'todos/index.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+{% if object_list %}
+    {% for user in object_list %}
+        <li><a href="{% url 'todos:details' user.id %}">{{ user.username }}</a></li>
+    {% endfor %}
+{% else %}
+    <h3>No users present</h3>
+{% endif %}
+{% endblock %}

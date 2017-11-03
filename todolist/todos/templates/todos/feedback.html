@@ -1,0 +1,34 @@
+{% extends 'todos/index.html' %}
+{% block title %}Details{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {% if feedback %}
+
+                            <li>{{ feedback.user.first_name }} <small>{{ feedback.mood }}</small> <textarea>{{ feedback.reasonMood }}</textarea></li>
+
+                            <p>&nbsp;</p
+                    {% else %}
+                        <h3>Er is nog geen feedback gegeven</h3>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% if error_message %}
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

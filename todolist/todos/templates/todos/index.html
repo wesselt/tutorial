@@ -4,7 +4,7 @@
     {% load staticfiles %}
     <meta charset="U{TF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link href="{% static 'todolist/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'todos/style.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -24,8 +24,8 @@
         <!-- Items -->
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav">
-                <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'todos:index' %}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; Home</a></li>
-                <li class="{% block songs_active %}{% endblock %}"><a href="#"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>&nbsp; Feedback</a></li>
+                <li class="{% block users_active %}{% endblock %}"><a href="{% url 'todos:index' %}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; Home</a></li>
+                <li class="{% block albums_active %}{% endblock %}"><a href="#"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>&nbsp; Feedback</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'todos:index' %}">
                 <div class="form-group">
@@ -35,8 +35,8 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp; Contact
+                    <a href="{% url 'todos:feedback-add' %}">
+                        <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp; Add Feedback
                     </a>
                 </li>
                 <li>

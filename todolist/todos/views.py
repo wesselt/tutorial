@@ -1,32 +1,107 @@
+from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from django.contrib.auth import logout
-from django.http import JsonResponse
-from django.shortcuts import render, get_object_or_404
-from .models import FeedBack
+from django.views.generic import View
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse_lazy
+from .models import FeedBack
+from .forms import UserForm, LoginForm
 
 
-# Create your views here.
-def index(request):
-    users = User.objects.all()
-    return render(request, 'todolist/main.html', { "users": users })
+class IndexView(generic.ListView):
+    template_name = 'todos/main.html'
+
+    def get_queryset(self):
+        return FeedBack.objects.all()
 
 
-def details(request, user_id):
-    user = get_object_or_404(User, pk=user_id)
-    feedback = user.feedback_set.all()
-    context = {
-        'feedback': feedback,
-        'user': user,
-    }
-    return render(request, 'todolist/details.html', context)
+class DetailView(generic.DetailView):
+    model = User
+    template_name = 'todos/details.html'
 
-def give_feedback(request, user_id):
-    user = get_object_or_404(User, pk=user_id)
-    user.feedback_set.create(mood=request.POST['mood'], reasonMood=request.POST['reasonMood'], date_feedback=request.POST['date'])
-    feedback = user.feedback_set.all()
-    context = {
-        'feedback': feedback,
-        'user': user,
-    }
-    return render(request, 'todolist/details.html', context)
+
+class FeedbackView(generic.DetailView):
+    model = FeedBack
+    template_name = 'todos/feedback.html'
+
+
+class FeedbackCreate(CreateView):
+    model = FeedBack
+    fields = ['mood', 'reasonMood', 'date_feedback']
+
+
+class FeedbackUpdate(UpdateView):
+    model = FeedBack
+    fields = ['mood', 'reasonMood', 'date_feedback']
+
+
+class FeedbackDelete(DeleteView):
+    model = FeedBack
+    success_url = reverse_lazy('todos:index')
+
+
+class LoginFormView(View):
+    form_class = LoginForm
+    template_name = 'todos/login_form.html'
+
+    # display blankform (when page is being requested)
+    def get(self, request):
+        form = self.form_class(None)
+        return render(request, self.template_name, {'form': form })
+
+
+    # process form data
+    def post(self, request):
+        form = self.form_class(request.POST)
+
+        if form.is_valid():
+            user = authenticate(username=username, password=password)
+
+            if user is not None:
+
+                if user.is_active:
+
+                    login(request, user)
+                    return redirect('todos:index')
+
+        return render(request, self.template_name, {'form': form})
+
+
+
+class UserFormView(View):
+    form_class = UserForm
+    template_name = 'todos/registration_form.html'
+
+    # display blank form
+    def get(self, request):
+        form = self.form_class(None)
+        return render(request, self.template_name, {'form': form})
+
+    # process form data
+    def post(self, request):
+        form = self.form_class(request.POST)
+
+        if form.is_valid():
+
+            user = form.save(commit=False)
+
+            # cleaned (normalized) data
+
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+            user.set_password(password)
+            user.save()
+
+            # return the correct user
+            user = authenticate(username=username, password=password)
+
+            if user is not None:
+
+                if user.is_active:
+
+                    login(request, user)
+                    return redirect('todos:index')
+
+        return render(request, self.template_name, {'form': form})
