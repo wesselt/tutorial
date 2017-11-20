@@ -1,4 +1,4 @@
-{% extends 'todos/index.html' %}
+{% extends 'todos/home.html' %}
 {% block title %}Details{% endblock %}
 {% block albums_active %}active{% endblock %}
 
@@ -13,13 +13,13 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     {% if user %}
-                        {% for all_feedback in user.feedback_set.all %}
+                        {% for feedback in user.feedback_set.all %}
 
-                            <span>{{ all_feedback.user.first_name }} <small>{{ all_feedback.mood }}</small> <textarea>{{ all_feedback.reasonMood }}</textarea></span>
-                    <a href="{% url 'todos:feedback-update' all_feedback.id %}" ><button type="button" class="btn btn-success">Update</button></a>
-                            <form action="{% url 'todos:feedback-delete' all_feedback.id %}" method="post" style="display: inline;">
+                            <span>{{ feedback.user.first_name }} <small>{{ feedback.mood }}</small> <textarea>{{ feedback.reasonMood }}</textarea></span>
+                    <a href="{% url 'todos:feedback-update' feedback.id %}" ><button type="button" class="btn btn-success">Update</button></a>
+                            <form action="{% url 'todos:feedback-delete' feedback.id %}" method="post" style="display: inline;">
                                 {% csrf_token %}
-                                <input type="hidden" name="feedback_id" value="{{ all_feedback.id }}" />
+                                <input type="hidden" name="feedback_id" value="{{ feedback.id }}" />
                                 <button type="submit" class="btn btn-danger btn-xs">
                                     <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
                                 </button>

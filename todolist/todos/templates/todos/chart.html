@@ -1,0 +1,7 @@
+{% extends 'todos/home.html' %}
+{% load staticfiles %}
+{% block title %}Sample{% endblock %}
+{% block charts %}
+	<div id="chart-1">{{ output|safe }}</div><br />
+	<div id="chart-2">{{ output_2|safe }}</div>
+{% endblock %}

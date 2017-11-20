@@ -1,11 +1,74 @@
-{% extends 'todos/index.html' %}
+{% extends 'todos/home.html' %}
+{% load staticfiles %}
 {% block title %}Home{% endblock %}
+    {% block charts %}
+    <div id="chart-1">{{ output|safe }}</div><br />
+	<div id="chart-2">{{ output_2|safe }}</div>
+    {% endblock %}
 {% block body %}
+
 {% if object_list %}
-    {% for user in object_list %}
-        <li><a href="{% url 'todos:details' user.id %}">{{ user.username }}</a></li>
+<h1><a href="{% url 'todos:details' request.user.id %}">{{ request.user.first_name }} {{ request.user.last_name }}</a></h1>
+    {% for feedback in object_list %}
+        <li><a href="{% url 'todos:feedback' feedback.id %}">{{ feedback.mood }}</a></li>
     {% endfor %}
 {% else %}
-    <h3>No users present</h3>
+    <h3>No feedback present</h3>
 {% endif %}
 {% endblock %}
+
+{% block mood_form %}
+<div class="col-md-4">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="panel-body">
+                <div class="alert alert-info">
+                    <div class="form">
+
+                        <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block related %}
+    <h3 class="my-4">Team mood</h3>
+
+      <div class="row">
+
+        <div class="col-md-7 col-sm-6 mb-4">
+          <a href="#">
+            <div id="fietswiel">{{ monthly|safe }}</div>
+          </a>
+        </div>
+
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="{% static 'afbeeldingen/grafiek.jpg' %}" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="{% static 'afbeeldingen/kpn-logo.png' %}" alt="">
+          </a>
+        </div>
+
+      </div>
+{% endblock %}
+
+</div>

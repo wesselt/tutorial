@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from todos.views import IndexView
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^todos/', include('todos.urls')),
+    url(r'^$', IndexView.as_view(), name='index'),
 ]

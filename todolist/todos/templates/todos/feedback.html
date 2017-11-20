@@ -1,4 +1,4 @@
-{% extends 'todos/index.html' %}
+{% extends 'todos/home.html' %}
 {% block title %}Details{% endblock %}
 {% block albums_active %}active{% endblock %}
 
@@ -15,8 +15,16 @@
                     {% if feedback %}
 
                             <li>{{ feedback.user.first_name }} <small>{{ feedback.mood }}</small> <textarea>{{ feedback.reasonMood }}</textarea></li>
+                            <a href="{% url 'todos:feedback-update' feedback.id %}" ><button type="button" class="btn btn-success">Update</button></a>
+                            <form action="{% url 'todos:feedback-delete' feedback.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <input type="hidden" name="feedback_id" value="{{ feedback.id }}" />
+                                <button type="submit" class="btn btn-danger btn-xs">
+                                    <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
+                                </button>
+                             </form>
 
-                            <p>&nbsp;</p
+                            <p>&nbsp;</p>
                     {% else %}
                         <h3>Er is nog geen feedback gegeven</h3>
                     {% endif %}
