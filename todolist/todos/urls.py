@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^details/(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='details'),
 
     # add user /todos/feedback/add/
-    url(r'feedback/add/$', views.FeedbackFormView.as_view(), name='feedback-add'),
+    url(r'feedback/add/$', views.MoodMonitor.as_view(), name='feedback-add'),
 
     # single feedback
     url(r'^feedback/(?P<pk>[0-9]+)/$', views.FeedbackView.as_view(), name='feedback'),

@@ -1,0 +1,32 @@
+{% extends 'todos/home.html' %}
+{% load staticfiles %}
+
+
+<div class="row" id="mood_mon">
+
+    <h4>Hoi</h4>
+
+</div>
+
+<script src="{% static '/vue/dist/vue.js' %}"></script>
+<script src="{% static '/uiv/dist/uiv.min.js' %}"></script>
+<script src="{% static '/axios/dist/axios.js' %}"></script>
+
+<script>
+
+    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+    axios.defaults.xsrfCookieName = "csrftoken";
+
+      Vue.use(uiv, {prefix: 'uiv'});
+
+
+        var cleanup_app = new Vue(
+            {
+                el: '#mood_mon',
+                data: {
+                    hostsearch: "",
+                    hosts: []
+                }
+            }
+            )
+</script>

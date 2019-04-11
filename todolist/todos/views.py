@@ -2,7 +2,7 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.views.generic import View
+from django.views.generic import View, TemplateView
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from .models import FeedBack
@@ -10,6 +10,9 @@ from .forms import UserForm, FeedbackForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from . import database_angular_gauge, last_month, area_chart
 
+class MoodMonitor(TemplateView):
+    title = "Mood Monitor"
+    template_name = 'mood/mood_monitor.html'
 
 
 class IndexView(LoginRequiredMixin, generic.ListView):
