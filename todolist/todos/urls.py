@@ -10,7 +10,7 @@ app_name = 'todos'
 urlpatterns = [
 
     # main /todos/
-    url(r'^$', views.HomeView.as_view(), name='index'),
+    url(r'^$', views.MoodMonitor.as_view(), name='index'),
 
     # login /todos/login
     url(r'^login/$', LoginView.as_view(template_name='todos/login_form.html')),
@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^details/(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='details'),
 
     # add user /todos/feedback/add/
-    url(r'feedback/add/$', views.MoodMonitor.as_view(), name='feedback-add'),
+    url(r'feedback/add/$', views.FeedbackFormView.as_view(), name='feedback-add'),
 
     # single feedback
     url(r'^feedback/(?P<pk>[0-9]+)/$', views.FeedbackView.as_view(), name='feedback'),

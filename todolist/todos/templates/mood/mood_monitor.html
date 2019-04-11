@@ -1,32 +1,94 @@
-{% extends 'todos/home.html' %}
 {% load staticfiles %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ view.title }}</title>
+    <link href="{% static 'bootstrap/bootstrap.min.css' %}"
+          rel="stylesheet">
 
-<div class="row" id="mood_mon">
+    <style>
 
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="mood_mon" >
+    <navbar style="background-color: green">
+        <a class="navbar-brand"
+           slot="brand"
+           href="#"
+           style="color: white">Brand</a>
+
+        <navbar-nav>
+
+            <li><a style="color: white" role="button">Add mood</a></li>
+
+        </navbar-nav>
+
+        <navbar-nav right>
+
+            <btn class="navbar-btn">Sign in</btn>
+
+        </navbar-nav>
+
+    </navbar>
+</div>
+<div class="container">
     <h4>Hoi</h4>
 
 </div>
 
-<script src="{% static '/vue/dist/vue.js' %}"></script>
-<script src="{% static '/uiv/dist/uiv.min.js' %}"></script>
-<script src="{% static '/axios/dist/axios.js' %}"></script>
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; KPN MOOD MONITOR 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+</body>
+
+<script type="text/javascript" src="{% static "fusioncharts/fusioncharts.js" %}"></script>
+<script type="text/javascript" src="{% static "fusioncharts/themes/fusioncharts.theme.fint.js" %}"></script>
+<script src="{% static 'vue/vue.js' %}"></script>
+<script src="{% static 'uiv/uiv.min.js' %}"></script>
+<script src="{% static 'axios/axios.js' %}"></script>
 
 <script>
 
     axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
     axios.defaults.xsrfCookieName = "csrftoken";
 
-      Vue.use(uiv, {prefix: 'uiv'});
+    Vue.use(uiv);
 
 
-        var cleanup_app = new Vue(
-            {
-                el: '#mood_mon',
-                data: {
-                    hostsearch: "",
-                    hosts: []
-                }
+    var cleanup_app = new Vue(
+        {
+            el: '#mood_mon',
+            data: {
+
+            },
+            methods: {
+                
             }
-            )
+
+
+
+        }
+
+
+    )
 </script>
+
+</html>
