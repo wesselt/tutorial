@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
 from django.contrib.auth.models import User
-from django.urls import reverse_lazy
+from django.core.urlresolvers import reverse_lazy
 from .models import FeedBack
 from .forms import UserForm, FeedbackForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -203,6 +203,3 @@ class HomeView(LoginRequiredMixin, View):
 
         return render(request, self.template_name, {'form': form})
 
-
-if __name__ == "__main__":
-    donoting = ""

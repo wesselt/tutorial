@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from django.contrib.auth import login, logout
-from django.urls import reverse_lazy
+from django.contrib.auth.views import login, logout
+from django.core.urlresolvers import reverse_lazy
 
 from . import views
 from . import database_angular_gauge
