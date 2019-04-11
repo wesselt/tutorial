@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-#from todolist.todos.views import IndexView
+from todos.views import IndexView
 
 
 urlpatterns = [

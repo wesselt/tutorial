@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from django.contrib.auth.views import login, logout
-from django.core.urlresolvers import reverse_lazy
+from django.contrib.auth.views import LoginView, LogoutView
+from django.urls import reverse_lazy
 
 from . import views
 from . import database_angular_gauge
@@ -13,10 +13,10 @@ urlpatterns = [
     url(r'^$', views.HomeView.as_view(), name='index'),
 
     # login /todos/login
-    url(r'^login/$', login, {'template_name': 'todos/login_form.html'}),
+    url(r'^login/$', LoginView.as_view(template_name='todos/login_form.html')),
 
     # logout /todos/logout
-    url(r'^logout/$', logout, {'next_page': reverse_lazy('todos:index')}, name='logout'),
+    url(r'^logout/$', LogoutView.as_view(), {'next_page': reverse_lazy('todos:index')}, name='logout'),
 
     # main /todos/register
     url(r'^register/$', views.UserFormView.as_view(), name='register'),
