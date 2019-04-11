@@ -75,11 +75,11 @@
 
 
 </div>
-<div class="container">
+<div class="container" id="new_mood">
     <h4>Hoi</h4>
-    <btn class="btn btn-danger">Sad</btn>
-    <btn class="btn btn-warning">Moderate</btn>
-    <btn class="btn btn-success">Happy</btn>
+    <btn class="btn btn-danger" @click="submitMood(0)">Sad</btn>
+    <btn class="btn btn-warning" @click="submitMood(1)">Moderate</btn>
+    <btn class="btn btn-success" @click="submitMood(2)">Happy</btn>
 </div>
 
 
@@ -172,10 +172,23 @@
 
 
         }
-    )
+    );
+
+    var mood_list = [];
+
+    var new_mood_app = new Vue({
+      el: '#new_mood',
+      methods: {
+        submitMood(mood) {
+          mood_list.push(mood);
+        }
+      }
+    });
+  
 </script>
 
 </html>
+<!--
 <script>
     import Btn from "uiv/src/components/button/Btn";
 
@@ -183,3 +196,4 @@
         components: {Btn}
     }
 </script>
+-->
