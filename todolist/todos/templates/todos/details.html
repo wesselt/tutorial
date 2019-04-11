@@ -4,42 +4,45 @@
 
 {% block body %}
 
-<div class="container-fluid">
+    <div class="container-fluid">
 
-    <div class="row">
+        <div class="row">
 
-        <!-- Left Album Info -->
-        <div class="col-sm-4 col-md-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    {% if user %}
-                        {% for feedback in user.feedback_set.all %}
+            <!-- Left Album Info -->
+            <div class="col-sm-4 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        {% if user %}
+                            {% for feedback in user.feedback_set.all %}
 
-                            <span>{{ feedback.user.first_name }} <small>{{ feedback.mood }}</small> <textarea>{{ feedback.reasonMood }}</textarea></span>
-                    <a href="{% url 'todos:feedback-update' feedback.id %}" ><button type="button" class="btn btn-success">Update</button></a>
-                            <form action="{% url 'todos:feedback-delete' feedback.id %}" method="post" style="display: inline;">
-                                {% csrf_token %}
-                                <input type="hidden" name="feedback_id" value="{{ feedback.id }}" />
-                                <button type="submit" class="btn btn-danger btn-xs">
-                                    <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
-                                </button>
-                             </form>
-                    <p>&nbsp;</p>
+                                <span>{{ feedback.user.first_name }} <small>{{ feedback.mood }}</small> <textarea>{{ feedback.reasonMood }}</textarea></span>
+                                <a href="{% url 'todos:feedback-update' feedback.id %}">
+                                    <button type="button" class="btn btn-success">Update</button>
+                                </a>
+                                <form action="{% url 'todos:feedback-delete' feedback.id %}" method="post"
+                                      style="display: inline;">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="feedback_id" value="{{ feedback.id }}"/>
+                                    <button type="submit" class="btn btn-danger btn-xs">
+                                        <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
+                                    </button>
+                                </form>
+                                <p>&nbsp;</p>
 
 
-                        {% endfor %}
-                    {% else %}
-                        <h3>Er is nog geen feedback gegeven</h3>
-                    {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <h3>Er is nog geen feedback gegeven</h3>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        {% if error_message %}
-        {% endif %}
-    </div>
+        <div class="row">
+            {% if error_message %}
+            {% endif %}
+        </div>
 
-</div>
+    </div>
 
 {% endblock %}

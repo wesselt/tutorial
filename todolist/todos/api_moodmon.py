@@ -7,22 +7,19 @@ import logging
 
 LOGGER = logging.getLogger(__name__)
 
+
 @api_view(['POST'])
 def signinout(request):
-    host = request.data
+    result_respones = ""
+    userdata = request.data
 
-    if not hosts:
+    if not userdata:
         return result_respones(
-            "warning",
-            "Geen host gevonden"
+            "error",
+            "notfound"
         )
 
     return result_respones(
         "success",
-        hosts
+        userdata['username']
     )
-
-
-
-
-
