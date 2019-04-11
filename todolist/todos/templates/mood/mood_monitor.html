@@ -24,26 +24,53 @@
 </head>
 <body>
 
-<div class="container" id="mood_mon" >
+<div class="container" id="mood_mon">
     <navbar style="background-color: green">
         <a class="navbar-brand"
            slot="brand"
            href="#"
            style="color: white">Brand</a>
 
-        <navbar-nav>
+        <navbar-nav v-if="!signin">
 
-            <li><a style="color: white" role="button">Add mood</a></li>
-
-        </navbar-nav>
-
-        <navbar-nav right>
-
-            <btn class="navbar-btn">Sign in</btn>
+            <li>
+                <a style="color: white"
+                   role="button">Add mood
+                </a>
+            </li>
 
         </navbar-nav>
+
+        <navbar-form right>
+            <div class="form-group"
+                 v-if="signin">
+
+                <input v-model="username"
+                       type="text"
+                       class="form-control"
+                       placeholder="Username"
+                       required>
+            </div>
+
+            <div class="form-group"
+                 v-if="signin">
+
+                <input v-model="password"
+                       type="password"
+                       class="form-control"
+                       placeholder="Password"
+                       required>
+            </div>
+
+            <btn v-on:click="signinout"
+                 class="navbar-btn">[[ signin_text ]]
+            </btn>
+        </navbar-form>
+
 
     </navbar>
+
+
 </div>
 <div class="container">
     <h4>Hoi</h4>
@@ -76,18 +103,66 @@
     var cleanup_app = new Vue(
         {
             el: '#mood_mon',
+            delimiters: ['[[', ']]'],
             data: {
-
+                signin: true,
+                signin_text: "Sign in"
             },
             methods: {
-                
+                signinout: function (signin) {
+
+                    if (this.signin) {
+                        this.signin_text = "Sign out";
+                        this.signin = false;
+                        axios.post('signinout/', {
+                            "user": this.username,
+                            "password": this.password
+                        })
+                            .then(function (response) {
+
+                                if (response.data.success) {
+
+                                    vm.hosts.push(response.data.success);
+                                    // this.$emit('add-cfg', cleanup_result_status );
+                                    return;
+                                }
+
+                                if (response.data.error) {
+
+                                    vm.$notify({
+                                        placement: 'top-left',
+                                        type: 'warning',
+                                        title: 'CleanUp warning',
+                                        content: response.data.error
+                                    });
+
+                                }
+
+                            })
+                            .catch(function (error) {
+                                    vm.$notify({
+                                        placement: 'top-left',
+                                        type: 'danger',
+                                        title: 'CleanUp failure',
+                                        content: error
+                                    });
+                                    console.log(error);
+
+                                }
+                            );
+
+
+                    } else {
+                        this.signin_text = "Sign in";
+                        this.signin = true
+                    }
+
+
+                }
             }
 
 
-
         }
-
-
     )
 </script>
 

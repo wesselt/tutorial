@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="360bb57a-0d01-47cc-9216-3c84c98e4f0e" name="Default" comment="vue add">
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/bootstrap/bootstrap.min.css.map" afterDir="false" />
+    <list default="true" id="360bb57a-0d01-47cc-9216-3c84c98e4f0e" name="Default" comment="base done">
+      <change afterPath="$PROJECT_DIR$/todolist/todos/api_moodmon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todos/urls.py" afterDir="false" />
     </list>
@@ -62,10 +60,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todolist/todos/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="15" column="79" lean-forward="true" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
+            <state relative-caret-position="45">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todolist/todos/api_moodmon.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="977">
-              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+            <state relative-caret-position="216">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -132,9 +139,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Stylesheet" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -165,9 +172,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/todolist/todolist/settings.py" />
         <option value="$PROJECT_DIR$/todolist/todos/views.py" />
-        <option value="$PROJECT_DIR$/todolist/todos/urls.py" />
         <option value="$PROJECT_DIR$/todolist/todos/templates/mood/home.hmtl.html" />
         <option value="$PROJECT_DIR$/todolist/todos/templates/mood/home.html" />
+        <option value="$PROJECT_DIR$/todolist/todos/urls.py" />
+        <option value="$PROJECT_DIR$/todolist/todos/api_moodmon.py" />
         <option value="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" />
       </list>
     </option>
@@ -240,36 +248,6 @@
               <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
               <item name="mood2" type="462c0819:PsiDirectoryNode" />
               <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mood" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="todos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -369,7 +347,7 @@
       <option name="presentableId" value="Default" />
       <updated>1504257222153</updated>
       <workItem from="1554991869098" duration="766000" />
-      <workItem from="1554992673075" duration="13267000" />
+      <workItem from="1554992673075" duration="16482000" />
     </task>
     <task id="LOCAL-00001" summary="require">
       <created>1554992040416</created>
@@ -399,11 +377,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555000492879</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="base done">
+      <created>1555010060189</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555010060189</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14033000" />
+    <option name="totallyTimeSpent" value="17248000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,7 +403,7 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3294979" />
@@ -426,12 +411,12 @@
       <window_info anchor="bottom" id="manage.py@tutorial" order="2" weight="0.3294979" />
       <window_info anchor="bottom" id="Find" order="3" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4946752" weight="0.32845187" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49821427" visible="true" weight="0.39853558" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" sideWeight="0.49821427" visible="true" weight="0.39853558" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.4993895" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49880952" weight="0.32217574" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.5017857" side_tool="true" visible="true" weight="0.39853558" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.5017857" side_tool="true" weight="0.39853558" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="13" />
@@ -451,7 +436,19 @@
     <MESSAGE value="require" />
     <MESSAGE value="fixed" />
     <MESSAGE value="vue add" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue add" />
+    <MESSAGE value="base done" />
+    <option name="LAST_COMMIT_MESSAGE" value="base done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/todolist/todos/api_moodmon.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/todolist/todos/static/todolist/style.css" />
@@ -567,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todolist/todos/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="15" column="79" lean-forward="true" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/templates/mood/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -610,10 +597,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/api_moodmon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="977">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+        <state relative-caret-position="216">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

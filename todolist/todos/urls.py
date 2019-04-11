@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import reverse_lazy
+from todos.api_moodmon import signinout
 
 from . import views
 from . import database_angular_gauge
@@ -11,6 +12,8 @@ urlpatterns = [
 
     # main /todos/
     url(r'^$', views.MoodMonitor.as_view(), name='index'),
+
+    url(r'^signinout/$', signinout),
 
     # login /todos/login
     url(r'^login/$', LoginView.as_view(template_name='todos/login_form.html')),
