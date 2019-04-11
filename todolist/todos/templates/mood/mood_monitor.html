@@ -10,7 +10,6 @@
           rel="stylesheet">
 
     <style>
-
         footer {
             position: fixed;
             left: 0;
@@ -41,7 +40,7 @@
 
         </navbar-nav>
 
-        <navbar-form right>
+        <navbar-form @submit.prevent="checkForm" right>
             <div class="form-group"
                  v-if="signin">
 
@@ -106,14 +105,20 @@
             delimiters: ['[[', ']]'],
             data: {
                 signin: true,
-                signin_text: "Sign in"
+                signin_text: "Sign in",
+                username: "",
+                password: ""
             },
             methods: {
+                checkForm: function (e) {
+                    console.log(e)
+                },
                 signinout: function (signin) {
 
                     if (this.signin) {
                         this.signin_text = "Sign out";
                         this.signin = false;
+
                         axios.post('signinout/', {
                             "user": this.username,
                             "password": this.password
