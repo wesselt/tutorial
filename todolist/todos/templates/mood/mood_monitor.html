@@ -33,7 +33,7 @@
                  src="{% static 'afbeeldingen/kpn-logo-small.png' %}"
                  width="70">
         </a>
-
+<template slot="collapse">
         <navbar-nav v-if="!signin">
 
             <li>
@@ -70,7 +70,7 @@
             </button>
         </navbar-form>
 
-
+</template>
     </navbar>
 
 
@@ -101,7 +101,7 @@
 
             <line-chart id="moodChart" :data="chartData">
             </line-chart>
-       
+
     </div>
 </div>
 
@@ -136,7 +136,7 @@
             el: '#mood_mon',
             delimiters: ['[[', ']]'],
             data: {
-                signin: true,
+                signin: false,
                 signin_text: "Sign in",
                 username: "",
                 password: ""
