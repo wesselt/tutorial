@@ -33,76 +33,74 @@
                  src="{% static 'afbeeldingen/kpn-logo-small.png' %}"
                  width="70">
         </a>
-<template slot="collapse">
-        <navbar-nav v-if="!signin">
+        <template slot="collapse">
+            <navbar-nav v-if="!signin">
 
-            <li>
-                <a style="color: white"
-                   role="button">Add mood
-                </a>
-            </li>
+                <li>
+                    <a style="color: white"
+                       role="button">Add mood
+                    </a>
+                </li>
 
-        </navbar-nav>
+            </navbar-nav>
 
-        <navbar-form @submit.prevent="checkForm" right>
-            <div class="form-group"
-                 v-if="signin">
+            <navbar-form @submit.prevent="checkForm" right>
+                <div class="form-group"
+                     v-if="signin">
 
-                <input v-model="username"
-                       type="text"
-                       class="form-control"
-                       placeholder="Username"
-                       required>
-            </div>
+                    <input v-model="username"
+                           type="text"
+                           class="form-control"
+                           placeholder="Username"
+                           required>
+                </div>
 
-            <div class="form-group"
-                 v-if="signin">
+                <div class="form-group"
+                     v-if="signin">
 
-                <input v-model="password"
-                       type="password"
-                       class="form-control"
-                       placeholder="Password"
-                       required>
-            </div>
+                    <input v-model="password"
+                           type="password"
+                           class="form-control"
+                           placeholder="Password"
+                           required>
+                </div>
 
-            <button type="submit"
-                    class="btn">[[ signin_text ]]
-            </button>
-        </navbar-form>
+                <button type="submit"
+                        class="btn">[[ signin_text ]]
+                </button>
+            </navbar-form>
 
-</template>
+        </template>
     </navbar>
 
 
 </div>
 <div class="container" id="new_mood">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-lg-12">
 
+
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <btn-group size="lg" vertical style="width: 100%">
+                <btn class="btn btn-success" v-on:click="submitMood(2)">Happy</btn>
+                <btn class="btn btn-warning" v-on:click="submitMood(1)">Moderate</btn>
+                <btn class="btn btn-danger" v-on:click="submitMood(0)">Sad</btn>
+            </btn-group>
+        </div>
+
+    <div class="col-lg-1">
     </div>
-    <div class="col-xs-4">
+</div>
 
-    </div>
-
-    <div class="col-xs-4">
-        <btn-group size="lg" vertical>
-            <btn class="btn btn-success" v-on:click="submitMood(2)">Happy</btn>
-            <btn class="btn btn-warning" v-on:click="submitMood(1)">Moderate</btn>
-            <btn class="btn btn-danger" v-on:click="submitMood(0)">Sad</btn>
-        </btn-group>
-    </div>
-
-    <div class="col-xs-4">
-
-    </div>
-
-    <div class="col-xs-12">
+<div class="col-xs-12">
 
 
+    <line-chart id="moodChart" :data="chartData">
+    </line-chart>
 
-            <line-chart id="moodChart" :data="chartData">
-            </line-chart>
-
-    </div>
+</div>
 </div>
 
 
