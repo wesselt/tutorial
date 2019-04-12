@@ -212,10 +212,8 @@
         },
         methods: {
             submitMood: function (mood) {
-                d = this.chartData;
-                ix = Object.keys(d).length;
-                d[ix] = mood;
-                this.chartData = JSON.parse(JSON.stringify(d));
+                ix = Object.keys(this.chartData).length;
+                Vue.set(this.chartData, ix, mood);
             }
         }
     });
