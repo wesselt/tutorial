@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360bb57a-0d01-47cc-9216-3c84c98e4f0e" name="Default" comment="col">
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/todos/api_moodmon.py" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todos/api_moodmon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,13 +71,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
+            <state relative-caret-position="193">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="n#style#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#0;n#navbar-nav#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#2275#2281#0#HTML" expanded="true" />
+                <element signature="e#2748#2754#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,9 +126,9 @@
         <option value="$PROJECT_DIR$/todolist/todos/templates/mood/home.hmtl.html" />
         <option value="$PROJECT_DIR$/todolist/todos/templates/mood/home.html" />
         <option value="$PROJECT_DIR$/todolist/todos/urls.py" />
-        <option value="$PROJECT_DIR$/todolist/todos/api_moodmon.py" />
         <option value="$PROJECT_DIR$/todolist/todos/templates/todos/details.html" />
         <option value="$PROJECT_DIR$/todolist/todos/templates/todos/home.html" />
+        <option value="$PROJECT_DIR$/todolist/todos/api_moodmon.py" />
         <option value="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" />
       </list>
     </option>
@@ -280,8 +274,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.mm2" />
       <item itemvalue="Python.django" />
+      <item itemvalue="Django server.mm2" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -295,7 +289,7 @@
       <option name="presentableId" value="Default" />
       <updated>1504257222153</updated>
       <workItem from="1554991869098" duration="766000" />
-      <workItem from="1554992673075" duration="27037000" />
+      <workItem from="1554992673075" duration="29466000" />
     </task>
     <task id="LOCAL-00001" summary="require">
       <created>1554992040416</created>
@@ -388,11 +382,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555052458993</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="col">
+      <created>1555054224513</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555054224513</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27803000" />
+    <option name="totallyTimeSpent" value="30232000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,7 +406,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26862028" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -415,14 +415,14 @@
       <window_info anchor="bottom" id="manage.py@tutorial" order="2" weight="0.3294979" />
       <window_info anchor="bottom" id="Find" order="3" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4946752" weight="0.32845187" />
-      <window_info active="true" anchor="bottom" id="Debug" order="5" sideWeight="0.49821427" visible="true" weight="0.40748662" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49821427" weight="0.40748662" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.4993895" weight="0.32941177" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49880952" weight="0.32217574" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.5017857" side_tool="true" weight="0.39853558" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -474,17 +474,6 @@
     <MESSAGE value="click method" />
     <MESSAGE value="col" />
     <option name="LAST_COMMIT_MESSAGE" value="col" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/todolist/todos/api_moodmon.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/todolist/todos/static/todolist/style.css" />
@@ -662,6 +651,12 @@
     <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/chart.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/static/chart/Chart.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/api_moodmon.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -672,21 +667,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todolist/todos/static/chart/Chart.bundle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
+        <state relative-caret-position="193">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="n#style#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#0;n#navbar-nav#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2275#2281#0#HTML" expanded="true" />
+            <element signature="e#2748#2754#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
