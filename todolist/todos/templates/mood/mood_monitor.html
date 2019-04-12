@@ -83,11 +83,13 @@
 
         </div>
         <div class="col-lg-8">
+
             <btn-group size="lg" vertical style="width: 100%">
                 <btn class="btn btn-success" v-on:click="submitMood(2)">Happy</btn>
                 <btn class="btn btn-warning" v-on:click="submitMood(1)">Moderate</btn>
                 <btn class="btn btn-danger" v-on:click="submitMood(0)">Sad</btn>
             </btn-group>
+
         </div>
 
     <div class="col-lg-1">
@@ -95,7 +97,7 @@
 </div>
 
 <div class="col-xs-12">
-
+<br>
 
     <line-chart id="moodChart" :data="chartData">
     </line-chart>
