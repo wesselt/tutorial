@@ -85,9 +85,9 @@
 
     <div class="col-xs-4">
         <btn-group size="lg" vertical>
-            <btn class="btn btn-success" v-on:click="submitMood(0)">Happy</btn>
+            <btn class="btn btn-success" v-on:click="submitMood(2)">Happy</btn>
             <btn class="btn btn-warning" v-on:click="submitMood(1)">Moderate</btn>
-            <btn class="btn btn-danger" v-on:click="submitMood(2)">Sad</btn>
+            <btn class="btn btn-danger" v-on:click="submitMood(0)">Sad</btn>
         </btn-group>
     </div>
 
@@ -101,9 +101,7 @@
     </div>
 
     <div class="col-xs-6">
-        <line-chart
-                :data="{'2016-02-13': 11, '2016-05-13': 23, '2017-01-13': 2, '2017-05-14': 5,'2018-07-14': 3, '2018-11-14': 55, '2018-12-18': 66 }">
-
+        <line-chart id="moodChart" :data="chartData">
         </line-chart>
     </div>
 
@@ -207,16 +205,17 @@
         }
     );
 
-    var mood_list = [];
-
     var new_mood_app = new Vue({
         el: '#new_mood',
         data: {
-            mood_list: []
+            chartData: {}
         },
         methods: {
             submitMood: function (mood) {
-                this.mood_list.push(mood);
+                d = this.chartData;
+                ix = Object.keys(d).length;
+                d[ix] = mood;
+                this.chartData = JSON.parse(JSON.stringify(d));
             }
         }
     });
