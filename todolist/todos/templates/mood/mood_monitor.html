@@ -76,10 +76,19 @@
 
 </div>
 <div class="container" id="new_mood">
-    <h4>Hoi</h4>
-    <btn class="btn btn-danger" @click="submitMood(0)">Sad</btn>
-    <btn class="btn btn-warning" @click="submitMood(1)">Moderate</btn>
-    <btn class="btn btn-success" @click="submitMood(2)">Happy</btn>
+   <div class="col-lg-4">
+
+   </div>
+    <div class="col-lg-4">
+    <btn-group size="lg" vertical>
+        <btn class="btn btn-success" @click="submitMood(0)">Happy</btn>
+        <btn class="btn btn-warning" @click="submitMood(1)">Moderate</btn>
+        <btn class="btn btn-danger" @click="submitMood(2)">Sad</btn>
+    </btn-group>
+        </div>
+    <div class="col-lg-4">
+
+   </div>
 </div>
 
 
@@ -177,14 +186,17 @@
     var mood_list = [];
 
     var new_mood_app = new Vue({
-      el: '#new_mood',
-      methods: {
-        submitMood(mood) {
-          mood_list.push(mood);
+        el: '#new_mood',
+        data: {
+            mood_list: []
+        },
+        methods: {
+            submitMood: function(mood) {
+                mood_list.push(mood);
+            }
         }
-      }
     });
-  
+
 </script>
 
 </html>
