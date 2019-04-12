@@ -92,13 +92,24 @@
     </div>
 
     <div class="col-xs-4">
-          <line-chart
-                        :data="{'2016-02-13': 11, '2016-05-13': 23, '2017-01-13': 2, '2017-05-14': 5,'2018-07-14': 3, '2018-11-14': 55, '2018-12-18': 66 }">
-
-                </line-chart>
 
     </div>
+     <div class="col-xs-12">
 
+
+    <div class="col-xs-2">
+    </div>
+
+    <div class="col-xs-6">
+        <line-chart
+                :data="{'2016-02-13': 11, '2016-05-13': 23, '2017-01-13': 2, '2017-05-14': 5,'2018-07-14': 3, '2018-11-14': 55, '2018-12-18': 66 }">
+
+        </line-chart>
+    </div>
+
+    <div class="col-xs-2">
+    </div>
+     </div>
 </div>
 
 
@@ -113,6 +124,8 @@
 
 <script type="text/javascript" src="{% static "fusioncharts/fusioncharts.js" %}"></script>
 <script type="text/javascript" src="{% static "fusioncharts/themes/fusioncharts.theme.fint.js" %}"></script>
+<script src="{% static 'chart/Chart.bundle.min.js' %}"></script>
+<script src="{% static 'vue-chartkick/vue-chartkick.js' %}"></script>
 <script src="{% static 'vue/vue.js' %}"></script>
 <script src="{% static 'uiv/uiv.min.js' %}"></script>
 <script src="{% static 'axios/axios.js' %}"></script>
@@ -121,7 +134,7 @@
 
     axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
     axios.defaults.xsrfCookieName = "csrftoken";
-
+    Vue.use(VueChartkick);
     Vue.use(uiv);
 
 

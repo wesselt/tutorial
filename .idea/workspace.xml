@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="360bb57a-0d01-47cc-9216-3c84c98e4f0e" name="Default" comment="button colors">
+    <list default="true" id="360bb57a-0d01-47cc-9216-3c84c98e4f0e" name="Default" comment="col">
+      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todos/static/chart/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,70 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-207" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/chart.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-366" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/login_form.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-592">
-              <caret selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/feedback.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" selection-start-line="4" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/feedback_form.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todolist/todos/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+            <state relative-caret-position="257">
+              <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -158,6 +105,7 @@
       <find>User</find>
       <find>user_id</find>
       <find>new_mood</find>
+      <find>chart</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,27 +165,6 @@
               <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
               <item name="mood2" type="462c0819:PsiDirectoryNode" />
               <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="axios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="axios" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
               <item name="todolist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -259,30 +186,16 @@
               <item name="todolist" type="462c0819:PsiDirectoryNode" />
               <item name="todos" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="afbeeldingen" type="462c0819:PsiDirectoryNode" />
+              <item name="chart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
               <item name="mood2" type="462c0819:PsiDirectoryNode" />
               <item name="todolist" type="462c0819:PsiDirectoryNode" />
               <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mood" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mood2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mood2" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="chart" type="462c0819:PsiDirectoryNode" />
+              <item name="Chart.bundle.js" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -300,10 +213,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/todolist/todos/static/chart" />
+      <recent name="$PROJECT_DIR$/todolist/todos/static/vue-chartkick" />
       <recent name="$PROJECT_DIR$/todolist/todos/static/bootstrap" />
       <recent name="$PROJECT_DIR$/todolist/todos/static/axios" />
       <recent name="$PROJECT_DIR$/todolist/todos/static/uiv" />
-      <recent name="$PROJECT_DIR$/todolist/todos/static/vue" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -381,7 +295,7 @@
       <option name="presentableId" value="Default" />
       <updated>1504257222153</updated>
       <workItem from="1554991869098" duration="766000" />
-      <workItem from="1554992673075" duration="24487000" />
+      <workItem from="1554992673075" duration="27037000" />
     </task>
     <task id="LOCAL-00001" summary="require">
       <created>1554992040416</created>
@@ -460,11 +374,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555049154583</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="click method">
+      <created>1555049915719</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555049915719</updated>
+    </task>
+    <task id="LOCAL-00013" summary="col">
+      <created>1555052458993</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555052458993</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25253000" />
+    <option name="totallyTimeSpent" value="27803000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,7 +407,7 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26862028" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26862028" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3294979" />
@@ -487,7 +415,7 @@
       <window_info anchor="bottom" id="manage.py@tutorial" order="2" weight="0.3294979" />
       <window_info anchor="bottom" id="Find" order="3" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4946752" weight="0.32845187" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49821427" visible="true" weight="0.40748662" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" sideWeight="0.49821427" visible="true" weight="0.40748662" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.4993895" weight="0.32941177" />
@@ -543,7 +471,9 @@
     <MESSAGE value="base logo done" />
     <MESSAGE value="button colors" />
     <MESSAGE value="button group add" />
-    <option name="LAST_COMMIT_MESSAGE" value="button group add" />
+    <MESSAGE value="click method" />
+    <MESSAGE value="col" />
+    <option name="LAST_COMMIT_MESSAGE" value="col" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -593,15 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todolist/todos/database_angular_gauge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,9 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todolist/todos/area_chart.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -681,16 +599,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/static/afbeeldingen/kpn-logo.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todolist/todos/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -722,6 +630,35 @@
         <state relative-caret-position="-207" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/database_angular_gauge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/area_chart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#82#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/templates/todos/chart.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -735,10 +672,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/static/vue-chartkick/vue-chartkick.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todolist/todos/static/chart/Chart.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/todolist/todos/templates/mood/mood_monitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+        <state relative-caret-position="257">
+          <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#navbar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
